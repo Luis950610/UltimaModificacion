@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5486BA4-41B0-473E-B9EB-BC1B1D50BFC3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>_2021</RootNamespace>
+    <AssemblyName>2021</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.11.3.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.11.3\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DynamicPDF.Printing.NETFramework40, Version=4.19.0.44079, Culture=neutral, PublicKeyToken=09b5ce0d5c0a9d8b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ceTe.DynamicPDF.Printing.NET.4.19.0\lib\net40\DynamicPDF.Printing.NETFramework40.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.13.2\lib\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetLight, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpreadsheetLight.Fork.3.5.0\lib\netstandard2.0\SpreadsheetLight.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Compression.Base, Version=19.4460.0.48, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Compression.Base.19.4.0.48\lib\net46\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=19.4460.0.48, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.19.4.0.48\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.Base, Version=19.4460.0.48, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Pdf.WinForms.19.4.0.48\lib\net46\Syncfusion.Pdf.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.PdfViewer.Windows, Version=19.4460.0.48, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.PdfViewer.Windows.19.4.0.48\lib\net46\Syncfusion.PdfViewer.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base, Version=19.4460.0.48, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Shared.Base.19.4.0.48\lib\net46\Syncfusion.Shared.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.5.0.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.7.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="model\2do Sprint\R de Asistencia\CExcel.cs" />
+    <Compile Include="model\2do Sprint\R de Asistencia\CMisModulos.cs" />
+    <Compile Include="model\2do Sprint\R de Asistencia\CTCurso.cs" />
+    <Compile Include="view\2do Sprint\In Impresion\ImpresionCertificados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\2do Sprint\In Impresion\ImpresionCertificados.Designer.cs">
+      <DependentUpon>ImpresionCertificados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\2do Sprint\In Impresion\VisualizarImpresion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\2do Sprint\In Impresion\VisualizarImpresion.Designer.cs">
+      <DependentUpon>VisualizarImpresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\2do Sprint\In M Laboratorio\VntMantenimientoLaboratorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\2do Sprint\In M Laboratorio\VntMantenimientoLaboratorio.Designer.cs">
+      <DependentUpon>VntMantenimientoLaboratorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\2do Sprint\In Matricula DAI\boleta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\2do Sprint\In Matricula DAI\boleta.Designer.cs">
+      <DependentUpon>boleta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\2do Sprint\In Matricula DAI\Curso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\2do Sprint\In Matricula DAI\Curso.Designer.cs">
+      <DependentUpon>Curso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\2do Sprint\In Matricula DAI\MatriculaDAI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\2do Sprint\In Matricula DAI\MatriculaDAI.Designer.cs">
+      <DependentUpon>MatriculaDAI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\2do Sprint\In Matricula DAI\MatriculaDAI_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\2do Sprint\In Matricula DAI\MatriculaDAI_2.Designer.cs">
+      <DependentUpon>MatriculaDAI_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\1er Sprint\Mantenimiento Matricula\CD_Boleta.cs" />
+    <Compile Include="model\1er Sprint\Mantenimiento Matricula\CD_CursoActivo.cs" />
+    <Compile Include="model\1er Sprint\Mantenimiento Matricula\CD_Estudiante.cs" />
+    <Compile Include="model\1er Sprint\Mantenimiento Matricula\CD_Matricula.cs" />
+    <Compile Include="model\1er Sprint\Mantenimiento Matricula\CE_Boleta.cs" />
+    <Compile Include="model\1er Sprint\Mantenimiento Matricula\CE_CursoActivo.cs" />
+    <Compile Include="model\1er Sprint\Mantenimiento Matricula\CE_Estudiante.cs" />
+    <Compile Include="model\1er Sprint\Mantenimiento Matricula\CE_Matricula.cs" />
+    <Compile Include="model\1er Sprint\Mantenimiento Matricula\CN_Boleta.cs" />
+    <Compile Include="model\1er Sprint\Mantenimiento Matricula\CN_CursoActivo.cs" />
+    <Compile Include="model\1er Sprint\Mantenimiento Matricula\CN_Estudiante.cs" />
+    <Compile Include="model\1er Sprint\Mantenimiento Matricula\CN_Matricula.cs" />
+    <Compile Include="model\1er Sprint\Mantenimiento Cursos\ClaseDatos.cs" />
+    <Compile Include="model\1er Sprint\Mantenimiento Cursos\ClaseEntidad.cs" />
+    <Compile Include="model\1er Sprint\Mantenimiento Cursos\ClaseNegocio.cs" />
+    <Compile Include="model\2do Sprint\Cambio Grupo\CD_CambioGrupo.cs" />
+    <Compile Include="model\2do Sprint\Cambio Grupo\CN_CambioGrupo.cs" />
+    <Compile Include="model\2do Sprint\G de Boletas\CFecha1.cs" />
+    <Compile Include="model\2do Sprint\G de Boletas\GestionBoleta.cs" />
+    <Compile Include="model\2do Sprint\G de Boletas\ModuloGestionBoleta.cs" />
+    <Compile Include="model\2do Sprint\M Convenio CCI\D_Boleta.cs" />
+    <Compile Include="model\2do Sprint\M Convenio CCI\D_CursoActivo.cs" />
+    <Compile Include="model\2do Sprint\M Convenio CCI\D_Estudiante.cs" />
+    <Compile Include="model\2do Sprint\M Convenio CCI\D_Matricula.cs" />
+    <Compile Include="model\2do Sprint\M Convenio CCI\E_Boleta.cs" />
+    <Compile Include="model\2do Sprint\M Convenio CCI\E_CursoActivo.cs" />
+    <Compile Include="model\2do Sprint\M Convenio CCI\E_Estudiante.cs" />
+    <Compile Include="model\2do Sprint\M Convenio CCI\E_Matricula.cs" />
+    <Compile Include="model\2do Sprint\M Convenio CCI\N_Boleta.cs" />
+    <Compile Include="model\2do Sprint\M Convenio CCI\N_CursoActivo.cs" />
+    <Compile Include="model\2do Sprint\M Convenio CCI\N_Estudiante.cs" />
+    <Compile Include="model\2do Sprint\M Convenio CCI\N_Matricula.cs" />
+    <Compile Include="model\2do Sprint\M Laboratorio\CD_MantLabo.cs" />
+    <Compile Include="model\2do Sprint\M Laboratorio\CE_MantLabo.cs" />
+    <Compile Include="model\2do Sprint\M Laboratorio\CN_MantLabo.cs" />
+    <Compile Include="model\2do Sprint\M Paquete\DCurso.cs" />
+    <Compile Include="model\2do Sprint\M Paquete\DEstudiante2sprint.cs" />
+    <Compile Include="model\2do Sprint\M Paquete\DPaquete.cs" />
+    <Compile Include="model\2do Sprint\M Paquete\EEstudiante2sprint.cs" />
+    <Compile Include="model\2do Sprint\M Paquete\EPaquete.cs" />
+    <Compile Include="model\2do Sprint\M Paquete\NCurso.cs" />
+    <Compile Include="model\2do Sprint\M Paquete\NEstudiante2sprint.cs" />
+    <Compile Include="model\2do Sprint\M Paquete\NPaquete.cs" />
+    <Compile Include="model\2do Sprint\Mantenimiento Tipo Matricula\CFecha.cs" />
+    <Compile Include="model\2do Sprint\Matricula DAI\CD_Boleta2sprint.cs" />
+    <Compile Include="model\2do Sprint\Matricula DAI\CD_CursoDAI.cs" />
+    <Compile Include="model\2do Sprint\Matricula DAI\CD_Estudiante2sprint.cs" />
+    <Compile Include="model\2do Sprint\Matricula DAI\CD_EstudianteMatricula.cs" />
+    <Compile Include="model\2do Sprint\Matricula DAI\CD_Matricula2sprint.cs" />
+    <Compile Include="model\2do Sprint\Matricula DAI\CE_AsignacionCurso.cs" />
+    <Compile Include="model\2do Sprint\Matricula DAI\CE_Boleta2sprint.cs" />
+    <Compile Include="model\2do Sprint\Matricula DAI\CE_CursoDAI.cs" />
+    <Compile Include="model\2do Sprint\Matricula DAI\CE_Estudiante2sprint.cs" />
+    <Compile Include="model\2do Sprint\Matricula DAI\CE_EstudianteMatriculado.cs" />
+    <Compile Include="model\2do Sprint\Matricula DAI\CE_MatriculaDAI.cs" />
+    <Compile Include="model\2do Sprint\Matricula DAI\CN_Boleta2sprint.cs" />
+    <Compile Include="model\2do Sprint\Matricula DAI\CN_CursoDAI.cs" />
+    <Compile Include="model\2do Sprint\Matricula DAI\CN_Estudiante2sprint.cs" />
+    <Compile Include="model\2do Sprint\Matricula DAI\CN_EstudianteMatricula.cs" />
+    <Compile Include="model\2do Sprint\Matricula DAI\CN_Matricula2sprint.cs" />
+    <Compile Include="model\2do Sprint\Registro Notas\CD_MatriculaConNotas.cs" />
+    <Compile Include="model\2do Sprint\Registro Notas\CD_MatriculaPostergada.cs" />
+    <Compile Include="model\2do Sprint\Registro Notas\CN_MatriculaConNotas.cs" />
+    <Compile Include="model\2do Sprint\Registro Notas\CN_MatriculaPostergada.cs" />
+    <Compile Include="view\1er Sprint\In M. Curso\InterfazMantenimientoCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\1er Sprint\In M. Curso\InterfazMantenimientoCurso.Designer.cs">
+      <DependentUpon>InterfazMantenimientoCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\2do Sprint\Mantenimiento Tipo Matricula\CModulos.cs" />
+    <Compile Include="model\2do Sprint\Mantenimiento Tipo Matricula\CDetalles.cs" />
+    <Compile Include="model\2do Sprint\Mantenimiento Tipo Matricula\CTipoMatricula.cs" />
+    <Compile Include="model\1er Sprint\Mantenimiento Cursos\CCurso.cs" />
+    <Compile Include="view\1er Sprint\In. ActivacionCurso\Interfaz_Activar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\1er Sprint\In. ActivacionCurso\Interfaz_Activar.Designer.cs">
+      <DependentUpon>Interfaz_Activar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\2do Sprint\In Cambio Grupo\CambioGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\2do Sprint\In Cambio Grupo\CambioGrupo.Designer.cs">
+      <DependentUpon>CambioGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\2do Sprint\In G Boletas\Form1Pao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\2do Sprint\In G Boletas\Form1Pao.Designer.cs">
+      <DependentUpon>Form1Pao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\2do Sprint\In M Convenios CCI\vtMatriculas_convenio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\2do Sprint\In M Convenios CCI\vtMatriculas_convenio.Designer.cs">
+      <DependentUpon>vtMatriculas_convenio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\2do Sprint\In M Paquete\FormMantenimientoPaquete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\2do Sprint\In M Paquete\FormMantenimientoPaquete.Designer.cs">
+      <DependentUpon>FormMantenimientoPaquete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\2do Sprint\In R Asistencia\InRegistroAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\2do Sprint\In R Asistencia\InRegistroAsistencia.Designer.cs">
+      <DependentUpon>InRegistroAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\2do Sprint\In Registro Notas\FormRegistroDeNotas1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\2do Sprint\In Registro Notas\FormRegistroDeNotas1.Designer.cs">
+      <DependentUpon>FormRegistroDeNotas1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\2do Sprint\In Tipo Matricula\InTipoMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\2do Sprint\In Tipo Matricula\InTipoMatricula.Designer.cs">
+      <DependentUpon>InTipoMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\1er Sprint\Adignacion Carga Academica\CD_CargaAcademica.cs" />
+    <Compile Include="model\1er Sprint\Adignacion Carga Academica\CD_CursosActivos.cs" />
+    <Compile Include="model\1er Sprint\Adignacion Carga Academica\CD_Docentes.cs" />
+    <Compile Include="model\1er Sprint\Adignacion Carga Academica\CN_CargaAcademica.cs" />
+    <Compile Include="model\1er Sprint\Adignacion Carga Academica\CN_CursosActivos.cs" />
+    <Compile Include="model\1er Sprint\Adignacion Carga Academica\CN_Docentes.cs" />
+    <Compile Include="view\ErrorTxtBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="view\1er Sprint\In. Carga Academica\FormPadre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\1er Sprint\In. Carga Academica\FormPadre.Designer.cs">
+      <DependentUpon>FormPadre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\1er Sprint\Activacion Curso\Operaciones.cs" />
+    <Compile Include="model\1er Sprint\Mantenimiento Docentes\CDocente.cs" />
+    <Compile Include="model\1er Sprint\Mantenimiento Docentes\conectar.cs" />
+    <Compile Include="model\conexion.cs" />
+    <Compile Include="model\1er Sprint\Mantenimiento Estudiantes\DEstudiante.cs" />
+    <Compile Include="model\1er Sprint\Mantenimiento Estudiantes\EEstudiante.cs" />
+    <Compile Include="model\1er Sprint\Mantenimiento Estudiantes\NEstudiante.cs" />
+    <Compile Include="view\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\1er Sprint\In M. Estudiantes\FormMantenimientoEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\1er Sprint\In M. Estudiantes\FormMantenimientoEstudiante.Designer.cs">
+      <DependentUpon>FormMantenimientoEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\1er Sprint\In. M. Docente\InDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\1er Sprint\In. M. Docente\InDocente.Designer.cs">
+      <DependentUpon>InDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controler\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\1er Sprint\In. M. Matricula\VntMatriculaEstudiantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\1er Sprint\In. M. Matricula\VntMatriculaEstudiantes.Designer.cs">
+      <DependentUpon>VntMatriculaEstudiantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\1er Sprint\In. Carga Academica\VntAsignacionCargaAcademica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\1er Sprint\In. Carga Academica\VntAsignacionCargaAcademica.Designer.cs">
+      <DependentUpon>VntAsignacionCargaAcademica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\1er Sprint\In. Carga Academica\VntDocentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\1er Sprint\In. Carga Academica\VntDocentes.Designer.cs">
+      <DependentUpon>VntDocentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\1er Sprint\In. Carga Academica\VntHorarioDoecenteCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\1er Sprint\In. Carga Academica\VntHorarioDoecenteCurso.Designer.cs">
+      <DependentUpon>VntHorarioDoecenteCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\1er Sprint\In. Carga Academica\VntModificarCargaAcademica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\1er Sprint\In. Carga Academica\VntModificarCargaAcademica.Designer.cs">
+      <DependentUpon>VntModificarCargaAcademica.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\1er Sprint\In M. Curso\InterfazMantenimientoCurso.resx">
+      <DependentUpon>InterfazMantenimientoCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\1er Sprint\In. ActivacionCurso\Interfaz_Activar.resx">
+      <DependentUpon>Interfaz_Activar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\1er Sprint\In. Carga Academica\FormPadre.resx">
+      <DependentUpon>FormPadre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\2do Sprint\In Cambio Grupo\CambioGrupo.resx">
+      <DependentUpon>CambioGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\2do Sprint\In G Boletas\Form1Pao.resx">
+      <DependentUpon>Form1Pao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\2do Sprint\In Impresion\ImpresionCertificados.resx">
+      <DependentUpon>ImpresionCertificados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\2do Sprint\In Impresion\VisualizarImpresion.resx">
+      <DependentUpon>VisualizarImpresion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\2do Sprint\In M Convenios CCI\vtMatriculas_convenio.resx">
+      <DependentUpon>vtMatriculas_convenio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\2do Sprint\In M Laboratorio\VntMantenimientoLaboratorio.resx">
+      <DependentUpon>VntMantenimientoLaboratorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\2do Sprint\In M Paquete\FormMantenimientoPaquete.resx">
+      <DependentUpon>FormMantenimientoPaquete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\2do Sprint\In Matricula DAI\boleta.resx">
+      <DependentUpon>boleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\2do Sprint\In Matricula DAI\Curso.resx">
+      <DependentUpon>Curso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\2do Sprint\In Matricula DAI\MatriculaDAI.resx">
+      <DependentUpon>MatriculaDAI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\2do Sprint\In Matricula DAI\MatriculaDAI_2.resx">
+      <DependentUpon>MatriculaDAI_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\2do Sprint\In R Asistencia\InRegistroAsistencia.resx">
+      <DependentUpon>InRegistroAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\2do Sprint\In Registro Notas\FormRegistroDeNotas1.resx">
+      <DependentUpon>FormRegistroDeNotas1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\1er Sprint\In M. Estudiantes\FormMantenimientoEstudiante.resx">
+      <DependentUpon>FormMantenimientoEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\1er Sprint\In. M. Docente\InDocente.resx">
+      <DependentUpon>InDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="view\2do Sprint\In Tipo Matricula\InTipoMatricula.resx">
+      <DependentUpon>InTipoMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\1er Sprint\In. M. Matricula\VntMatriculaEstudiantes.resx">
+      <DependentUpon>VntMatriculaEstudiantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\1er Sprint\In. Carga Academica\VntAsignacionCargaAcademica.resx">
+      <DependentUpon>VntAsignacionCargaAcademica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\1er Sprint\In. Carga Academica\VntDocentes.resx">
+      <DependentUpon>VntDocentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\1er Sprint\In. Carga Academica\VntHorarioDoecenteCurso.resx">
+      <DependentUpon>VntHorarioDoecenteCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\1er Sprint\In. Carga Academica\VntModificarCargaAcademica.resx">
+      <DependentUpon>VntModificarCargaAcademica.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="model\2do Sprint\E Certificado\" />
+    <Folder Include="model\2do Sprint\Impresion\" />
+    <Folder Include="view\2do Sprint\In E Certificado\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plantilla.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plantilla2.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoCon fondo CCI.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlantillaHTML.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnsaacLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlantillaExcel.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unsaac.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\ceTe.DynamicPDF.Printing.NET.4.19.0\build\net40\ceTe.DynamicPDF.Printing.NET.targets" Condition="Exists('..\packages\ceTe.DynamicPDF.Printing.NET.4.19.0\build\net40\ceTe.DynamicPDF.Printing.NET.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\ceTe.DynamicPDF.Printing.NET.4.19.0\build\net40\ceTe.DynamicPDF.Printing.NET.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ceTe.DynamicPDF.Printing.NET.4.19.0\build\net40\ceTe.DynamicPDF.Printing.NET.targets'))" />
+  </Target>
+</Project>
